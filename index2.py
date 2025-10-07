@@ -1,5 +1,5 @@
 class Book:
-    def init(self, title, author, pages):
+    def __init__(self, title, author, pages):
         self.title = title
         self.author = author
         self.pages = pages
@@ -19,13 +19,13 @@ class Book:
         else:
             print(f"کتاب '{self.title}' در امانت نبود.")
 
-    def str(self):
+    def __str__(self):
         status = "امانت داده شده" if self.is_borrowed else "موجود"
         return f"{self.title} | نویسنده: {self.author} | صفحات: {self.pages} | وضعیت: {status}"
 
 
 class Library:
-    def init(self):
+    def __init__(self):
         self.books = []
 
     def add_book(self, book):
